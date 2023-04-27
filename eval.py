@@ -14,6 +14,7 @@ urls = ['https://example.com/api/endpoint'] * 1000
 with concurrent.futures.ThreadPoolExecutor(max_workers=1000) as executor:
     futures = [executor.submit(make_request) for url in urls]
     responses = [future.result() for future in futures]
+    concurrent.futures.wait(futures)
 
 plt.plot(responses)
 plt.xlabel('Request Number')
