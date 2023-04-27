@@ -7,6 +7,7 @@ def make_request():
     url = 'http://172.16.193.38:8080/fibo/5'
     response = requests.get(url)
     data = response.json()
+    print(data)
     return data.status_code
 
 
