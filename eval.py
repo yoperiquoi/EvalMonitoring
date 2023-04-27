@@ -16,8 +16,6 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=1000) as executor:
     responses = [future.result() for future in futures]
     concurrent.futures.wait(futures)
 
-plt.plot(responses)
-plt.xlabel('Request Number')
-plt.ylabel('Response Value')
-plt.title('API Response Plot')
+# Plot requests responses return codes as a histogram
+plt.hist([response.status_code for response in responses])
 plt.show()
