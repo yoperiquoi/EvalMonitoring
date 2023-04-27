@@ -17,3 +17,4 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=1000) as executor:
 
 plt.hist(responses)
 plt.show()
+plt.savefig('histogram.png')
