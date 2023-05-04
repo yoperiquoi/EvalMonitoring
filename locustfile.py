@@ -4,9 +4,10 @@ import socket
 import time
 import csv
 import json
+import os
 
 # node informations
-node = "ecotype-5.nantes.grid5000.fr"
+node = os.getenv('USECASE_ADDRESS')
 node_short = node.split('.')[0]
 
 
