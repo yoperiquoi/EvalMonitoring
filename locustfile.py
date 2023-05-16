@@ -33,7 +33,7 @@ class ChargeLoad(HttpUser):
         if self.limit_time < time.time() :
             response_file.close()
             raise StopUser()
-        with self.client.get(url='/fibo/5') as response:
+        with self.client.get(url='/fibo/15/10',headers={"x-user-energy-objective": "80"}) as response:
             response_writer.writerow([time.time(), json.loads(response.content.decode('utf-8')) , response.request.url, node_short])
         
 
