@@ -51,3 +51,5 @@ This can be changed in the ```locustfile.py```.
 ![locust frontend](https://github.com/yoperiquoi/EvalMonitoring/blob/main/locust_front.jpg?raw=true)
 
 You can push Start swarming to start the evaluation (be careful that your use case is ready.)
+
+This will generate a ```response.csv``` and ```energy.csv``` file which can be used with the ```csv_eval/csv_plot.py``` script.
